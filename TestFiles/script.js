@@ -1,6 +1,6 @@
 // Importing module
 
-const { addTwo, multiplyTwo } = require("./twoNumbers.js");
+import { addTwo, multiplyTwo } from "./twoNumbers.js";
 
 const sum = addTwo(5, 10);
 console.log(`Add two numbers: ${sum}`);
