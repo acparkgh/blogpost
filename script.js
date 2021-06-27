@@ -1,6 +1,6 @@
-"use strict";
+// Importing module
 
-import {addTwo, multiplyTwo} from "./twoNumbers.js";
+import { addTwo, multiplyTwo } from "./twoNumbers.js";
 
 const sum = addTwo(5, 10);
 console.log(`Add two numbers: ${sum}`);
