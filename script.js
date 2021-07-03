@@ -1,9 +1,67 @@
-// Importing module
+'use strict';
 
-const { addTwo, multiplyTwo } = require("./twoNumbers.js");
+const likesCount = document.querySelector(".likes-count");
+const inputLikesCount = document.querySelector(".enter-likes-count");
+const voteButton = document.querySelector(".vote-btn");
 
-const sum = addTwo(5, 10);
-console.log(`Add two numbers: ${sum}`);
+class LikesCount {
 
-const multiply = multiplyTwo(5, 10);
-console.log(`Multiply two numbers: ${multiply}`);
+  constructor(count = 0) {
+    this.count = count;
+    likesCount.textContent = this.count;
+    voteButton.addEventListener("click", this.increaseLike.bind(this));
+  };
+  
+  increaseLike() {
+    
+    const inputValue = Number(inputLikesCount.value);
+    if ( !(inputValue === parseInt(inputValue, 10) && inputValue > 0 ) ) return;
+
+    // this.count += inputValue;
+    likesCount.textContent = this.count += inputValue;
+    // console.log(this.count);
+  };
+  
+};
+
+const like1 = new LikesCount(0);
+
+
+
+
+
+
+
+
+
+
+// voteButton.addEventListener("click", this.increaseLike);
+
+
+// increaseLike = () => {
+//     this.count++;
+//     likesCount.textContent = this.count;
+//   };
+  
+
+
+
+
+
+// const vote = { likes: 0 };
+
+// const increaseLike = function () {
+//   return ++vote.likes;
+// };
+
+// voteButton.addEventListener("click", function () {
+//   const voteCount = increaseLike();
+//   console.log(voteCount);
+//   likesCount.textContent = voteCount;
+// });
+
+
+
+
+
+
