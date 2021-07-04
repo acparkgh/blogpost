@@ -15,11 +15,11 @@ class LikesCount {
   increaseLike() {
     
     const inputValue = Number(inputLikesCount.value);
-    if ( !(inputValue === parseInt(inputValue, 10) && inputValue > 0 ) ) return;
 
-    // this.count += inputValue;
-    likesCount.textContent = this.count += inputValue;
-    // console.log(this.count);
+    if (Number.isInteger(inputValue) && inputValue > 0) {
+      this.count += inputValue;
+      likesCount.textContent = this.count;
+    };
   };
   
 };
